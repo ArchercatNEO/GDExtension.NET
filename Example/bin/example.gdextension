@@ -1,0 +1,9 @@
+[configuration]
+
+entry_symbol = "init_assembly"
+compatibility_minimum = 4.2
+
+[libraries]
+
+linux.x86_64.debug = "res://bin/Release/net8.0/linux-x64/publish/GDExtensionSharp.so"
+linux.x86_64.release = "res://bin/Release/net8.0/linux-x64/publish/GDExtensionSharp.so"

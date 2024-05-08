@@ -1,0 +1,14 @@
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Debug/net8.0/ClassDB
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Debug/net8.0/ClassDB.deps.json
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Debug/net8.0/ClassDB.runtimeconfig.json
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Debug/net8.0/ClassDB.dll
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Debug/net8.0/ClassDB.pdb
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.GeneratedMSBuildEditorConfig.editorconfig
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.AssemblyInfoInputs.cache
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.AssemblyInfo.cs
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.csproj.CoreCompileInputs.cache
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.dll
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/refint/ClassDB.dll
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.pdb
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ClassDB.genruntimeconfig.cache
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/obj/Debug/net8.0/ref/ClassDB.dll

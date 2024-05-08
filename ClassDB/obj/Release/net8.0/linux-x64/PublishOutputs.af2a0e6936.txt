@@ -1,0 +1,2 @@
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Release/net8.0/linux-x64/publish/ClassDB.so
+/home/ernesto/Dev/Testing/GodotCompat/ClassDB/bin/Release/net8.0/linux-x64/publish/ClassDB.pdb
