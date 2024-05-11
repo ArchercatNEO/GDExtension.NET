@@ -1,6 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
-using GodotSharp.NativeInterop;
+using GDExtension.NativeInterop;
 
 public class Summator3D
 {

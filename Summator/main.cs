@@ -22,10 +22,12 @@ public class SummatorBinder : GDExtensionBinder
     {
         base.InitializeLevel(_, p_level);
         Console.WriteLine($"SummatorBinder initializing module {p_level}");
-
-        ClassCreationInfo newClass = Summator3D.GenerateBind();
         
-        calls.RegisterExtensionClass("Summator3D", "Node", ref newClass);
+        if (p_level == GDExtensionInitializationLevel.Scene)
+        {
+            ClassCreationInfo newClass = Summator3D.GenerateBind();
+            calls.RegisterExtensionClass("Summator3D", "Node", ref newClass);
+        }
     }
 
     [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]

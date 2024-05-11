@@ -38,8 +38,13 @@ public unsafe class GDExtensionBinder
         //TODO Check compatibility
 
         //TODO Load everything (with source gen probably)
-        callBinder.NewStringNameFromUtf8CharsAndLengthInternal = callBinder.LoadProcAdress<NativeCalls.NewStringNameFromUtf8CharsAndLengthDelegate>("string_name_new_with_utf16_chars");
-        StringName name = new(callBinder, "MyAwesomeNode");
+        callBinder.NewStringNameFromUtf8CharsAndLengthInternal = callBinder.LoadProcAdress<NativeCalls.NewStringNameFromUtf8CharsAndLengthDelegate>("string_name_new_with_utf8_chars_and_len");
+        new StringName(callBinder, "MyAwesomeNode");
+        new StringName(callBinder, "MyAwesomeNode");
+        new StringName(callBinder, "MyAwesomeNode");
+        new StringName(callBinder, "MyAwesomeNode");
+        new StringName(callBinder, "MyAwesomeNode");
+        new StringName(callBinder, "MyAwesomeNode");
         callBinder.RegisterExtensionClassInternal = callBinder.LoadProcAdress<NativeCalls.RegisterExtensionClassDelegate>("classdb_register_extension_class3");
 
         r_initialization->initialize = initializeLevel;
