@@ -17,19 +17,18 @@ public unsafe class NativeCalls(GetProcAddress procAdressLoader, void* library)
 
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    public delegate void NewStringNameFromUtf8CharsAndLengthDelegate(IntPtr outString, string source, long size);
+    public delegate void NewStringNameFromUtf8CharsAndLengthDelegate(IntPtr outString, [MarshalAs(UnmanagedType.LPStr)] string source);
     public NewStringNameFromUtf8CharsAndLengthDelegate NewStringNameFromUtf8CharsAndLengthInternal;
 
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     public delegate void RegisterExtensionClassDelegate(void* library, StringName className, StringName parentClass, ClassCreationInfo* info);
     public RegisterExtensionClassDelegate RegisterExtensionClassInternal;
-    public void RegisterExtensionClass(string className, string parentClass, ref ClassCreationInfo info)
+    public void RegisterExtensionClass(string className, string parentClass, ClassCreationInfo info)
     {
         StringName name = new(this, className);
         StringName parentClassName = new(this, parentClass);
-        ClassCreationInfo* infoPtr = (ClassCreationInfo*)Unsafe.AsPointer(ref info);
-        RegisterExtensionClassInternal.Invoke(library, name, parentClassName, infoPtr);
+        RegisterExtensionClassInternal.Invoke(library, name, parentClassName, &info);
     }
 
     public static extern void PrintErrorBind(string message, string functionName, string filePath, int lineNumber, GDExtensionBool notifyEditor); 

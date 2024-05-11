@@ -12,20 +12,17 @@ public sealed class StringName
 	/// <summary>
 	/// Pointer to the shared string
 	/// </summary>
-	internal IntPtr _data = 314;
+	internal IntPtr _data;
 
 	public unsafe StringName(NativeCalls calls, string name)
 	{
 		Console.WriteLine($"[{_data}], {name}");
+		GCHandle self = GCHandle.Alloc(this, GCHandleType.Pinned);
+		IntPtr addr = self.AddrOfPinnedObject();
 		
-		GCHandle _selfPin = GCHandle.Alloc(this, GCHandleType.Pinned);
-		IntPtr ptr = _selfPin.AddrOfPinnedObject();
+		calls.NewStringNameFromUtf8CharsAndLengthInternal.Invoke(addr, name);
 		
-		byte[] utf8 = Encoding.UTF8.GetBytes(name);
-		calls.NewStringNameFromUtf8CharsAndLengthInternal.Invoke(ptr, name, utf8.Length);
-		
-		_selfPin.Free();
-		
+		self.Free();
 		Console.WriteLine($"[{_data}], {this}");
 	}
 
@@ -43,8 +40,7 @@ public sealed class StringName
 
     public override unsafe string ToString()
     {
-        byte* strPtr = (byte*)_data;
-		string repr = Marshal.PtrToStringUTF8(_data);
+		string repr = Marshal.PtrToStringUni(_data);
         return repr;
     }
 }

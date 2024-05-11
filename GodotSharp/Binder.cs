@@ -38,13 +38,7 @@ public unsafe class GDExtensionBinder
         //TODO Check compatibility
 
         //TODO Load everything (with source gen probably)
-        callBinder.NewStringNameFromUtf8CharsAndLengthInternal = callBinder.LoadProcAdress<NativeCalls.NewStringNameFromUtf8CharsAndLengthDelegate>("string_name_new_with_utf8_chars_and_len");
-        new StringName(callBinder, "MyAwesomeNode");
-        new StringName(callBinder, "MyAwesomeNode");
-        new StringName(callBinder, "MyAwesomeNode");
-        new StringName(callBinder, "MyAwesomeNode");
-        new StringName(callBinder, "MyAwesomeNode");
-        new StringName(callBinder, "MyAwesomeNode");
+        callBinder.NewStringNameFromUtf8CharsAndLengthInternal = callBinder.LoadProcAdress<NativeCalls.NewStringNameFromUtf8CharsAndLengthDelegate>("string_name_new_with_utf8_chars");
         callBinder.RegisterExtensionClassInternal = callBinder.LoadProcAdress<NativeCalls.RegisterExtensionClassDelegate>("classdb_register_extension_class3");
 
         r_initialization->initialize = initializeLevel;
@@ -57,7 +51,6 @@ public unsafe class GDExtensionBinder
         return nativeCalls;
     }
 
-    [UnmanagedCallConv(CallConvs = [ typeof(CallConvCdecl) ])]
     protected virtual void InitializeLevel(IntPtr _, GDExtensionInitializationLevel level)
     {
         //! ClassDB._currentLevel = p_level;
@@ -69,7 +62,6 @@ public unsafe class GDExtensionBinder
         LevelInitialized[(int)level]++;
     }
 
-    [UnmanagedCallConv(CallConvs = [ typeof(CallConvCdecl) ])]
     protected virtual void DeinitializeLevel(IntPtr _, GDExtensionInitializationLevel level)
     {
         //! ClassDB._currentLevel = p_level;
@@ -82,5 +74,5 @@ public unsafe class GDExtensionBinder
         }
     }
 
-    protected virtual GDExtensionInitializationLevel MinimumInitializationLevel => GDExtensionInitializationLevel.Max;
+    protected virtual GDExtensionInitializationLevel MinimumInitializationLevel => GDExtensionInitializationLevel.Core;
 }

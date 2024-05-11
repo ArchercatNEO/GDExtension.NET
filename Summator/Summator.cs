@@ -34,11 +34,11 @@ public class Summator3D
         };
     }
 
-    private delegate object CreateInstanceDelegate(IntPtr userData);
-    private static object CreateInstance(IntPtr userData)
+    private delegate IntPtr CreateInstanceDelegate(IntPtr userData);
+    private static IntPtr CreateInstance(IntPtr userData)
     {
         var instance = new Summator3D();
-        return null;
+        return 0;
     }
 
     private delegate void FreeDelegate();

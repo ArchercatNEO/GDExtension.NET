@@ -17,7 +17,6 @@ public class SummatorBinder : GDExtensionBinder
         calls = InitializeAssembly(p_get_proc_address, p_library, r_initialization, binder);
     }
 
-    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     protected override void InitializeLevel(nint _, GDExtensionInitializationLevel p_level)
     {
         base.InitializeLevel(_, p_level);
@@ -26,11 +25,10 @@ public class SummatorBinder : GDExtensionBinder
         if (p_level == GDExtensionInitializationLevel.Scene)
         {
             ClassCreationInfo newClass = Summator3D.GenerateBind();
-            calls.RegisterExtensionClass("Summator3D", "Node", ref newClass);
+            calls.RegisterExtensionClass("Summator3D", "Node", newClass);
         }
     }
 
-    [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
     protected override void DeinitializeLevel(nint _, GDExtensionInitializationLevel p_level)
     {
         base.DeinitializeLevel(_, p_level);
