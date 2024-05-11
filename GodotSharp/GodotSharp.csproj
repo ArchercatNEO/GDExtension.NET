@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>Latest</LangVersion>
+    
+    <PackageId>GodotSharpExt</PackageId>
+    <Version>0.0.0</Version>
+    <Authors>ArchercatNEO</Authors>
+    
+    <RootNamespace>Godot</RootNamespace>
+    <IsAotCompatible>true</IsAotCompatible>
+    
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+  </PropertyGroup>
+
+</Project>

@@ -1,7 +1,7 @@
 {
     "files.exclude": {
-        "**/bin": false,
-        "**/obj": true
+        "**/.git": false,
+        "**/*.o": true
     },
     "files.associations": {
         "*.gltf": "json",

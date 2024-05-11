@@ -1,3 +1,0 @@
-/home/ernesto/Dev/Testing/GodotCompat/Example/bin/Release/net8.0/linux-x64/publish/GDExtensionSharp.so
-/home/ernesto/Dev/Testing/GodotCompat/Example/bin/Release/net8.0/linux-x64/publish/GDExtensionSharp.pdb
-/home/ernesto/Dev/Testing/GodotCompat/Example/bin/Release/net8.0/linux-x64/publish/ClassDB.pdb
