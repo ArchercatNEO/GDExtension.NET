@@ -38,7 +38,7 @@ public unsafe class GDExtensionBinder
         //TODO Check compatibility
 
         //TODO Load everything (with source gen probably)
-        callBinder.NewStringNameFromUtf8CharsAndLengthInternal = callBinder.LoadProcAdress<NativeCalls.NewStringNameFromUtf8CharsAndLengthDelegate>("string_name_new_with_latin1_chars");
+        callBinder.NewStringNameFromUtf8CharsAndLengthInternal = callBinder.LoadProcAdress<NativeCalls.NewStringNameFromUtf8CharsAndLengthDelegate>("string_name_new_with_utf16_chars");
         StringName name = new(callBinder, "MyAwesomeNode");
         callBinder.RegisterExtensionClassInternal = callBinder.LoadProcAdress<NativeCalls.RegisterExtensionClassDelegate>("classdb_register_extension_class3");
 
