@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodotSharp", "GodotSharp\GodotSharp.csproj", "{290D9BF8-28E7-4957-B0EA-BA7F755C7AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generators", "GodotSharp.Generators\Generators.csproj", "{5FD2918C-667B-4A2C-98A5-12255832E16D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDExtensionSharp", "Summator\GDExtensionSharp.csproj", "{1D04CAE0-C247-49E5-AC00-DEF2256EF14C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{290D9BF8-28E7-4957-B0EA-BA7F755C7AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290D9BF8-28E7-4957-B0EA-BA7F755C7AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290D9BF8-28E7-4957-B0EA-BA7F755C7AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290D9BF8-28E7-4957-B0EA-BA7F755C7AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD2918C-667B-4A2C-98A5-12255832E16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD2918C-667B-4A2C-98A5-12255832E16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD2918C-667B-4A2C-98A5-12255832E16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD2918C-667B-4A2C-98A5-12255832E16D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D04CAE0-C247-49E5-AC00-DEF2256EF14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D04CAE0-C247-49E5-AC00-DEF2256EF14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D04CAE0-C247-49E5-AC00-DEF2256EF14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D04CAE0-C247-49E5-AC00-DEF2256EF14C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
