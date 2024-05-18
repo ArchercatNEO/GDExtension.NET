@@ -4,22 +4,17 @@
         {
             "name": "Linux",
             "includePath": [
+                "${workspaceFolder}/godot-cpp/gdextension",
+                "${workspaceFolder}/godot-cpp/gen/include/**",
                 "${workspaceFolder}/godot-cpp/include/**",
-                "${workspaceFolder}/godot-cpp/gdextension"
+                "${workspaceFolder}/godot"
             ],
             "defines": [],
             "cStandard": "c17",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-gcc-x64",
             "compilerPath": "/usr/bin/gcc",
-            "mergeConfigurations": false,
-            "browse": {
-                "path": [
-                    "/home/ernesto/Dev/Testing/GodotCompat/godot-cpp/include",
-                    "/home/ernesto/Dev/Testing/GodotCompat"
-                ],
-                "limitSymbolsToIncludedHeaders": true
-            }
+            "mergeConfigurations": false
         }
     ]
 }

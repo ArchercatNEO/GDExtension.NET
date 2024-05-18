@@ -8,12 +8,22 @@
     <Authors>ArchercatNEO</Authors>
     
     <RootNamespace>Godot</RootNamespace>
+    <IncludeBuildOutput>false</IncludeBuildOutput> 
     <IsAotCompatible>true</IsAotCompatible>
     
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <WarningsAsErrors>8785</WarningsAsErrors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference 
+      Include="../GodotSharp.Generators/Internal/Generators.csproj" 
+      OutputItemType="Analyzer"
+      ReferenceOutputAssembly="false"
+    />
+  </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
+using GDExtension;
 using GDExtension.NativeInterop;
 
 public class Summator3D
@@ -34,28 +35,60 @@ public class Summator3D
         };
     }
 
+    ~Summator3D()
+    {
+        Console.WriteLine("Summator is somehow getting collected");
+    }
+
     private delegate IntPtr CreateInstanceDelegate(IntPtr userData);
+    static Summator3D global;
     private static IntPtr CreateInstance(IntPtr userData)
     {
-        var instance = new Summator3D();
         return 0;
+        global = new Summator3D();
+        Console.WriteLine(global);
+        GCHandle handle = GCHandle.Alloc(global, GCHandleType.Pinned);
+        IntPtr addr = handle.AddrOfPinnedObject();
+        Console.WriteLine(addr);
+        return addr;
     }
 
     private delegate void FreeDelegate();
     private static void Free()
     {
-
+        Console.WriteLine("Attempting to free object");
     }
 
     private delegate byte GetBindDelegate(IntPtr instance, string fieldName, IntPtr ret);
     private static byte GetBind(IntPtr instance, string fieldName, IntPtr ret)
     {
+        Console.WriteLine("Attempting to GetBind object");
         return 0;
     }
 
     private delegate byte SetBindDelegate(IntPtr instance, string fieldName, IntPtr value);
     private static byte SetBind(IntPtr instance, string fieldName, IntPtr value)
     {
+        Console.WriteLine("Attempting to SetBind object");
         return 0;
+    }
+    
+    private int count = 0;
+
+    public void Add()
+    {
+        count += 3;
+    }
+
+    public static unsafe void AddCall(IntPtr userData, IntPtr selfPtr, Variant* args, long argCount, Variant retVal, IntPtr err)
+    {
+        Console.WriteLine(selfPtr);
+        Summator3D self = *(Summator3D*)selfPtr;
+        self.Add();
+    }
+
+    public int GetTotal()
+    {
+        return count;
     }
 }

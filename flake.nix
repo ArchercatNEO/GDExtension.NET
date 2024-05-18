@@ -7,12 +7,13 @@
 
   outputs = { self, nixpkgs }: 
   let
-      pkgs = import nixpkgs {
-        system = "x86_64-linux";
-      };
-  in {
-    
-    devShells.x86_64-linux.default = pkgs.mkShell {
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+    };
+  in
+  {
+    devShells."${system}".default = pkgs.mkShell {
       packages = with pkgs; [
         git
         gdb
